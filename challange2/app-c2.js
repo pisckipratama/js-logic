@@ -1,22 +1,17 @@
-// challange 2 rubicamp
-
-function deretKaskus(n) {
-    let numbers = 0;
-    let kaskus = [];
-    
-    for (let i = 0; i < n; i++) {
-        numbers += 3;
-        if (numbers % 5 === 0 && numbers % 6 === 0) {
-            kaskus.push('KASKUS');
-        } else if (numbers % 5 === 0) {
-            kaskus.push('KAS');
-        } else if (numbers % 6 === 0) {
-            kaskus.push('KUS');
+function deretKaskus(number) {
+    let result = [];
+    for (let i = 3; i <= number * 3; i += 3) {
+        if (i % 5 == 0 && i % 6 == 0) {
+            result.push('KASKUS');
+        } else if (i % 5 == 0) {
+            result.push('KAS');
+        } else if (i % 6 == 0) {
+            result.push('KUS');
         } else {
-            kaskus.push(numbers);
+            result.push(i);
         }
     }
-    return kaskus;
+    return result;
 }
 
-console.log(deretKaskus(10));
+console.log(deretKaskus(60));
