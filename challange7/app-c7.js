@@ -5,6 +5,7 @@ function weirdMultiply(sentence) {
     let data = changeToString.split('');
 
     if (data.length === 1) {
+        // return 'Angka harus lebih dari 2 digit';
         return sentence;
     }
     let result = data.reduce((accumulator, currentValue) => accumulator * currentValue);
