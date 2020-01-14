@@ -4,14 +4,17 @@ function indexPrime(param1) {
     let prime = 2;
     let result = 0;
 
-    function checkPrime(num) {
-        for (let i = 2; i < num; i++)
-            if (num % i === 0) return false;
-        return num > 1;
-    }
+    // function checkPrime(num) {
+    //     for (let i = 2; i < num; i++)
+    //         if (num % i === 0) return false;
+    //     return num > 1;
+    // }
 
     while (result < param1) {
-        if (checkPrime(prime) === true) {
+        let isPrime = true;
+        for (let i = 2; i < prime; i++)
+            if (prime % i === 0) isPrime = false;
+        if (isPrime) {
             result++;
         }
         prime++;
